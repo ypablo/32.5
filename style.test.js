@@ -11,5 +11,4 @@ describe('calculateStylePoints', () => {
             assert.deepEqual(actual, expected);
         });
     });
-
 });    
