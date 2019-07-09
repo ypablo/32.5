@@ -2,7 +2,7 @@ const assert = require('assert');
 const calculateStylePoints = require('./style');
 
 describe('calculateStylePoints', () => {
-    describe('finalNote', () => {
+    describe('styleNotes', () => {
         it('should return style points', () => {
             const actual = [16, 17, 18, 18.5, 19];
         
