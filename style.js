@@ -1,13 +1,12 @@
 // calculateStylePoints.js
 const calculateStylePoints = (styleNotes) => {
-  const styleNotes = [];
+  styleNotes = [];
   let styleN = styleNotes.map((item) => {
     return (Math.round(item * 2) / 2).toFixed(1);
   });
 
   if (styleN.length != 5) {
-    alert("Incorrect number of notes. Please try again.");
-    break;
+    return;
   } else {
     let minNote = Math.min(...styleN);
     let maxNote = Math.max(...styleN);

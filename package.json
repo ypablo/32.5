@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha index.test.js",
+    "test": "mocha distance.test.js",
+    "test2": "mocha style.test.js",
     "test:watch": "onchange \"./*.js\" -- npm test"
   },
   "keywords": [],
