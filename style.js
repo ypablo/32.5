@@ -5,7 +5,7 @@ const calculateStylePoints = (styleNotes) => {
   });
 
   if (styleN.length != 5) {
-    return;
+    throw new Error('Invalid argument');
   } else {
     let minNote = Math.min(...styleN);
     let maxNote = Math.max(...styleN);
