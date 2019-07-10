@@ -40,11 +40,14 @@ describe('calculateDistancePoints', () => {
     });
     describe('hillSize', () => {
         it('should return error if hillSize is not small, medium or large', () => {
-            const actual = "normal";
+            const actual = calculateDistancePoints(110.5, "normal", 125);
 
-            const expected = "large";
+            const expected = 102.5;
 
-            assert.throws(calculateDistancePoints, Error, "Error thrown");
+           // expect(calculateDistancePoints).to.throw(new Error, ('Error thrown'));
+           // assert.throws(calculateDistancePoints, Error, "Error thrown");
+           assert.fail(actual, expected)
+
         });
     });
     describe('kPoint', () => {

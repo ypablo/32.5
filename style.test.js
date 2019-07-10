@@ -4,11 +4,11 @@ const calculateStylePoints = require('./style');
 describe('calculateStylePoints', () => {
     describe('styleNotes', () => {
         it('should return exact number of style points', () => {
-            const actual = [16, 17, 18, 18.5, 19];
+            const actual = calculateStylePoints(54);
 
-            const expected = [16, 17, 18, 18.5, 19];
+            const expected = 54;
 
-            assert.deepEqual(actual, expected);
+            assert.equal(actual, expected);
         });
     });
 });    
