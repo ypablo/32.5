@@ -13,27 +13,27 @@ describe('calculateDistancePoints', () => {
     });
     describe('hillSize', () => {
         it('should return small hillSize', () => {
-            const actual = "small";
+            const actual = calculateDistancePoints(120, "small", 100);
 
-            const expected = "small";
+            const expected = 100;
 
             assert.equal(actual, expected);
         });
     });
     describe('hillSize', () => {
         it('should return medium hillSize', () => {
-            const actual = "medium";
+            const actual = calculateDistancePoints(96.5, "medium", 110);
 
-            const expected = "medium";
+            const expected = 35.5;
 
             assert.equal(actual, expected);
         });
     });
     describe('hillSize', () => {
         it('should return large hillSize', () => {
-            const actual = "large";
+            const actual = calculateDistancePoints(110.5, "large", 125);
 
-            const expected = "large";
+            const expected = 102.5;
 
             assert.equal(actual, expected);
         });
