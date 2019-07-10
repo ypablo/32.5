@@ -1,6 +1,5 @@
 // calculateStylePoints.js
 const calculateStylePoints = (styleNotes) => {
-  styleNotes = [];
   let styleN = styleNotes.map((item) => {
     return (Math.round(item * 2) / 2).toFixed(1);
   });

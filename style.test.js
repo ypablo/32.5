@@ -3,9 +3,9 @@ const calculateStylePoints = require('./style');
 
 describe('calculateStylePoints', () => {
     describe('styleNotes', () => {
-        it('should return style points', () => {
+        it('should return exact number of style points', () => {
             const actual = [16, 17, 18, 18.5, 19];
-        
+
             const expected = [16, 17, 18, 18.5, 19];
 
             assert.deepEqual(actual, expected);

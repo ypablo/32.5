@@ -1,15 +1,12 @@
 // calculateDistancePoints.js
 const calculateDistancePoints = (distance, hillSize, kPoint) => {
-
   let skiJumperPts;
   let Pts;
 
   if (isNaN(kPoint) || kPoint === null || kPoint === undefined) {
-    //throw new Error('Invalid argument')
-    throw new Error('Invalid argument')
-    //return false;
+    throw new Error('Invalid argument');
   } else if (hillSize != "small" || hillSize != "medium" || hillSize != "large") {
-    return false;
+    throw new Error('Invalid argument');
   } else if (hillSize == "small") {
     Pts = (Math.round(distance * 2) / 2 - kPoint) * 2;
     skiJumperPts = 60 + Pts;
