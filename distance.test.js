@@ -49,9 +49,9 @@ describe('calculateDistancePoints', () => {
     });
     describe('kPoint', () => {
         it('should return error if kPoint is not a number', () => {
-            const actual = "ghgh";
+            const actual = "test";
 
-            const expected = false;
+            const expected = 'Invalid argument';
 
             assert.throws(calculateDistancePoints, Error, "Error thrown");
         });
