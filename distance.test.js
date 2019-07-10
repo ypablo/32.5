@@ -46,7 +46,7 @@ describe('calculateDistancePoints', () => {
 
            // expect(calculateDistancePoints).to.throw(new Error, ('Error thrown'));
            // assert.throws(calculateDistancePoints, Error, "Error thrown");
-           assert.fail(actual, expected)
+           assert.throws(calculateDistancePoints, Error, "Error thrown");
 
         });
     });
