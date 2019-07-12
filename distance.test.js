@@ -4,11 +4,11 @@ const calculateDistancePoints = require('./distance');
 describe('calculateDistancePoints', () => {
     describe('distance', () => {
         it('should return error if distance is not a number', () => {
-            const actual = "test";
+            const actual = calculateDistancePoints("test", "small", 100);;
 
-            const expected = 'Invalid argument';
+            const expected = 100;
 
-            assert.throws(calculateDistancePoints, Error, "Error thrown");
+            assert.throws(() => calculateDistancePoints("120", 'small', 100), /^Error: Invalid 1st argument$/);
         });
     });
     describe('hillSize', () => {
@@ -44,19 +44,20 @@ describe('calculateDistancePoints', () => {
 
             const expected = 102.5;
 
-           // expect(calculateDistancePoints).to.throw(new Error, ('Error thrown'));
-           // assert.throws(calculateDistancePoints, Error, "Error thrown");
-           assert.throws(calculateDistancePoints, Error, "Error thrown");
+            assert.throws(() => calculateDistancePoints(110.5, 'normal', 125), /^Error: Invalid 2nd argument$/);
 
         });
     });
     describe('kPoint', () => {
         it('should return error if kPoint is not a number', () => {
-            const actual = "test";
+            const actual = calculateDistancePoints(110, 'small', null);
 
-            const expected = 'Invalid argument';
+            const expected = 102.5;
 
-            assert.throws(calculateDistancePoints, Error, "Error thrown");
+            //assert.throws(() => calculateDistancePoints(110, 'small', null), /^Error: Invalid 3rd argument$/);
+            //assert.throws(() => calculateDistancePoints, /^ Error: Invalid 3rd argument$ /);
+            //assert.throws(function () { calculateDistancePoints(110, 'small', null); }, Error);
+            assert.throws(calculateDistancePoints.bind(110, 'small', null), Error);
         });
     });
 });    
