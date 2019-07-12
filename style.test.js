@@ -11,4 +11,25 @@ describe('calculateStylePoints', () => {
             assert.equal(actual, expected);
         });
     });
+});
+
+describe('calculateStylePoints', () => {
+    describe('Notes', () => {
+        it('should contain exactly 5 notes (digits)', () => {
+            const actual = 5
+
+            const expected = 5;
+
+            assert.equal(actual, expected);
+        });
+    });
+});
+
+describe('calculateStylePoints', () => {
+    describe('styleNotes', () => {
+        it('should return error if any style point is not a number', () => {
+
+            assert.throws(() => calculateStylePoints(null), /^Error: Invalid argument$/);
+        });
+    });
 });    
