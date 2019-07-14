@@ -3,33 +3,26 @@ const calculateStylePoints = require('./style');
 
 describe('calculateStylePoints', () => {
     describe('styleNotes', () => {
-        it('should return exact number of style points', () => {
-            const actual = calculateStylePoints(54);
+        it('should return final value of style points', () => {
+            const actual = calculateStylePoints(16, 17, 18, 19, 20);;
 
             const expected = 54;
 
             assert.equal(actual, expected);
         });
     });
-});
 
-describe('calculateStylePoints', () => {
-    describe('Notes', () => {
-        it('should contain exactly 5 notes (digits)', () => {
-            const actual = 5
+    describe('styleNotes', () => {
+        it('should return error if there are not exactly 5 style points (digits)', () => {
 
-            const expected = 5;
-
-            assert.equal(actual, expected);
+            assert.throws(() => calculateStylePoints(18, 19, 20), /^Error: Invalid argument$/);
         });
     });
-});
 
-describe('calculateStylePoints', () => {
     describe('styleNotes', () => {
         it('should return error if any style point is not a number', () => {
 
-            assert.throws(() => calculateStylePoints(null), /^Error: Invalid argument$/);
+            assert.throws(() => calculateStylePoints(16, "kodilla", 18, 19, 20), /^Error: Invalid argument$/);
         });
     });
 });    

@@ -5,29 +5,24 @@ const calculateStylePoints = (styleNotes) => {
 
   styleNotes.map(function (item) {
     if (isNaN(item)) {
-      styleNotes === NaN;
       throw new Error('Invalid argument - NaN');
     } else if (item === null) {
-      styleNotes === null;
       throw new Error('Invalid argument - null');
     } else if (item === undefined) {
-      styleNotes === undefined;
       throw new Error('Invalid argument - undefined');
     }
-  })
-
-
+  });
 
   if (styleNotes.length != 5) {
-    throw new Error('Invalid argument');
-  } else {
-    let minNote = Math.min(...styleNotes);
-    let maxNote = Math.max(...styleNotes);
-    let sumNote = styleNotes.reduce(reducer);
-    Notes = sumNote - minNote - maxNote;
+    throw new Error('Invalid argument - wrong length of notes');
   }
 
-  return (Math.round(Notes * 2) / 2).toFixed(1);
+  let minNote = Math.min(...styleNotes);
+  let maxNote = Math.max(...styleNotes);
+  let sumNote = styleNotes.reduce(reducer);
+  styleNotes = sumNote - minNote - maxNote;
+
+  return (Math.round(styleNotes * 2) / 2)
 };
 
 module.exports = calculateStylePoints;
