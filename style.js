@@ -1,6 +1,6 @@
 // calculateStylePoints.js
 const calculateStylePoints = (styleNotes) => {
-  styleNotes = [16, 17, 18, 19, 20];
+
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
   styleNotes.map(function (item) {
