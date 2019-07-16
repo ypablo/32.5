@@ -3,7 +3,6 @@ const calculateDistancePoints = (distance, hillSize, kPoint) => {
   let skiJumperPts;
   let Pts;
 
-
   if (isNaN(kPoint) || kPoint == null || kPoint == undefined) {
     throw new Error('Invalid 3rd argument');
   } else if (isNaN(distance) || distance == null || distance == undefined) {

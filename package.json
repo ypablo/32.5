@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha distance.test.js",
     "test2": "mocha style.test.js",
+    "test3": "mocha total.test.js",
     "test:watch": "onchange \"./*.js\" -- npm test"
   },
   "keywords": [],
